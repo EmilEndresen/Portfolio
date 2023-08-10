@@ -1,0 +1,419 @@
+:root {
+    --main-dark: hsl(240, 2%, 8%);
+    --accent-dark: hsla(0, 0%, 20%, 88%);
+    --accent-green: hsl(143, 28%, 50%);
+    --accent-pink: hsl(7, 37%, 68%);
+    --main-light: #faeeef;
+    --title-font: 'Kodchasan', sans-serif;
+    --main-font: 'Kufam', sans-serif;
+}
+
+/* =================
+======CSS resets====== 
+====================*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--main-dark);
+    color: var(--main-light);
+    font-family: var(--main-font);
+    min-height: 100vh;
+    min-height: 100svh;
+    line-height: 1.5;
+    -webkit-font-smootuing: antialiased;
+}
+
+img,
+picture,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    color: var(--main-light);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-light);
+    display: block;
+}
+
+/* =======================
+========TYPHOGRAPHY========
+=========================== */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--title-font);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.7rem;
+}
+
+h2 {
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.title-underline {
+    display: block;
+    width: 15rem;
+    height: 0.15rem;
+    background-color: var(--accent-green);
+    margin: 0 auto .3rem auto;
+    border-radius: 20px;
+}
+
+/* ============================
+==========NAVIGATION===========
+=============================== */
+
+.header {
+    background: var(--accent-dark);
+}
+
+.header-home {
+    background: var(--accent-dark);
+    position: sticky;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+
+}
+
+
+.logo-link {
+    color: var(--main-light);
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+    margin-block: auto;
+    margin-left: 2rem;
+}
+
+.nav {
+    position: fixed;
+    background: var(--accent-dark);
+    width: 60%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    transform: translateX(0);
+    transition: transform 250ms;
+    margin-block: auto;
+}
+
+.navigation-open {
+    transform: translateX(-100%);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin-top: 7rem;
+    padding: 0;
+    height: 60%;
+    align-items: center;
+    flex-direction: column;
+    text-transform: capitalize;
+    row-gap: 2rem;
+
+}
+
+.nav-link {
+    color: var(--main-light);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0;
+    transition: .3s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--accent-green);
+}
+
+.visuallyHidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.hamburger {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-right: 1.3rem;
+    margin-top: 1rem;
+}
+
+.hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: var(--main-light);
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    z-index: 1000;
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 13.5px;
+}
+
+.bar3 {
+    right: 0;
+}
+
+.bar4 {
+    bottom: 0;
+}
+
+.hamburger2 .bar2,
+.hamburger3 .bar3,
+.hamburger4 .bar4 {
+    top: 13.5px;
+}
+
+.hamburger4 .bar5 {
+    bottom: 0px;
+}
+
+.hamburger4 .bar {
+    transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
+}
+
+.hamburger4 .bar2 {
+    width: 1px;
+    transform: rotate(90deg);
+    left: 13.5px;
+}
+
+.hamburger4 .bar3 {
+    width: 1px;
+    left: 13.5px;
+
+}
+
+.checkbox4:checked+label>.hamburger4>.bar1 {
+    top: 13.5px;
+    background-color: transparent;
+}
+
+.checkbox4:checked+label>.hamburger4>.bar2 {
+    left: 0px;
+    width: 30px;
+    transform: rotate(45deg);
+}
+
+.checkbox4:checked+label>.hamburger4>.bar3 {
+    left: 0;
+    width: 30px;
+    transform: rotate(-45deg);
+}
+
+.checkbox4:checked+label>.hamburger4>.bar4 {
+    background-color: transparent;
+}
+
+.checkbox4:checked+label>.hamburger4>.bar5 {
+    bottom: 13.5px;
+    background-color: transparent;
+}
+
+
+
+.current {
+    border-bottom: 2px solid var(--accent-green);
+}
+
+@media (min-width: 700px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .header-home .nav {
+        background: transparent;
+    }
+
+
+    .nav {
+        position: initial;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0 2rem 0 0;
+    }
+
+    .nav-item {
+        margin-left: 2em;
+        text-transform: capitalize;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+
+/* ========================
+========Hero section========
+=========================== */
+
+.hero {
+    margin-top: 60px;
+    width: min(60ch, 100% - 4rem);
+    margin-inline: auto;
+    min-height: 60vh;
+    min-height: 60svh;
+}
+
+
+.hero>p {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.hero>img {
+    margin: 8rem auto 0 auto;
+}
+
+
+/* ========================
+=========About me===========
+=========================== */
+
+.about {
+    margin-top: 60px;
+    width: min(60ch, 100% - 4rem);
+    margin-inline: auto;
+    min-height: 70vh;
+    min-height: 70svh;
+}
+
+.about>img {
+    border-radius: 10px;
+    margin-top: 4rem;
+}
+
+.about>p {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: .875rem;
+}
+
+/* ========================
+=========Projects===========
+=========================== */
+
+
+.projects {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+
+.projects>div {
+    width: min(60ch, 100% - 4rem);
+    background-color: var(--accent-dark);
+    margin-block: 5rem;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+}
+
+.projects>div>p {
+    padding: 1rem 1rem 0 1rem;
+}
+
+
+/* ===================
+=======CONTACT========
+====================== */
+
+
+.contact {
+    width: min(60ch, 100% - 4rem);
+    margin-inline: auto;
+}
+
+
+.contact img {
+    display: none;
+}
+
+.contact>div {
+    text-align: left;
+    margin-top: 3em;
+    margin-inline: auto;
+    width: min(60ch, 100% - 4rem);
+}
+
+.icon-small-screen {
+    displ
+}
