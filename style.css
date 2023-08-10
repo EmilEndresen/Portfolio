@@ -75,7 +75,7 @@ h2,
 h3,
 h4 {
     font-family: var(--title-font);
-    text-align: center;
+
 }
 
 h1 {
@@ -85,10 +85,12 @@ h1 {
 h2 {
     font-size: .8rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 h3 {
     font-size: 1.7rem;
+    text-align: center;
 }
 
 h4 {
@@ -322,6 +324,9 @@ h4 {
 =========================== */
 
 .hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
     margin-top: 6rem;
     width: min(60ch, 100% - 4rem);
     margin-inline: auto;
@@ -330,9 +335,9 @@ h4 {
 }
 
 
+
 .hero>p {
     margin-top: 2rem;
-    text-align: center;
     font-size: 1rem;
 }
 
