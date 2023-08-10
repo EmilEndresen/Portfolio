@@ -20,6 +20,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--main-dark);
     color: var(--main-light);
@@ -409,9 +413,11 @@ h4 {
     transition: .3s;
 }
 
-.project-btn>button:hover {
+.project-btn>button:hover,
+.project-btn>button:focus {
     background-color: var(--accent-green);
     color: var(--main-dark);
+    outline: transparent;
 }
 
 
@@ -431,8 +437,120 @@ h4 {
 }
 
 .contact>div {
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
     text-align: left;
     margin-top: 3em;
     margin-inline: auto;
     width: min(60ch, 100% - 4rem);
+}
+
+.icon-large-screen {
+    display: none;
+}
+
+.icon-small-screen {
+    height: 100px;
+    width: 100px;
+    fill: var(--accent-green);
+}
+
+.icon-small-screen:hover {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(5deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
+
+    30% {
+        transform: rotate(5deg);
+    }
+
+    40% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    70% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* ======================
+=========Footer==========
+========================= */
+
+
+footer {
+    min-height: 60px;
+    padding-block: 2rem;
+    background-color: var(--accent-dark);
+    margin-top: 5rem;
+}
+
+footer>p {
+    margin-bottom: 1rem;
+}
+
+.accent-green {
+    color: var(--accent-green);
+    text-decoration: underline;
+    transition: .3s;
+}
+
+.accent-green:hover,
+.accent-green:focus {
+    color: var(--main-light);
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+a {
+    width: fit-content;
+    margin: 0 auto 0 auto;
+}
+
+
+
+address>a:hover {
+    color: var(--accent-green);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: .3s;
 }
