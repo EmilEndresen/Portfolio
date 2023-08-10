@@ -396,6 +396,23 @@ h4 {
     padding: 1rem 1rem 0 1rem;
 }
 
+.project-btn>button {
+    margin: 1rem 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--main-dark);
+    color: var(--accent-green);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.project-btn>button:hover {
+    background-color: var(--accent-green);
+    color: var(--main-dark);
+}
+
 
 /* ===================
 =======CONTACT========
@@ -417,8 +434,4 @@ h4 {
     margin-top: 3em;
     margin-inline: auto;
     width: min(60ch, 100% - 4rem);
-}
-
-.icon-small-screen {
-    displ
 }
