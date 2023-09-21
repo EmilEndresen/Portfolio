@@ -470,7 +470,7 @@ h4 {
 
 
 .contact img {
-    display: none;
+    display: block;
 }
 
 .contact>div {
@@ -497,6 +497,7 @@ h4 {
     animation: shake 0.5s;
 }
 
+/* Animation that makes the phone vibrate when hovering */
 @keyframes shake {
     0% {
         transform: rotate(0deg);
@@ -591,3 +592,8 @@ address>a:hover {
     font-size: 1rem;
     transition: .4s;
 }
+
+
+/* =======================
+=======Footer===========
+========================= */
