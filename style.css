@@ -470,7 +470,8 @@ h4 {
 
 
 .contact img {
-    display: block;
+    display: none;
+    background-color: #faeeef;
 }
 
 .contact>div {
